@@ -1,0 +1,6 @@
+{
+  "name": "人才与企业信息综合管理平台",
+  "description": "Talent & Enterprise Integrated Management Platform - 集中管理辖区内企业与人才信息、获奖记录，支持多维度智能筛选、AI简历信息解析与自动推荐功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,487 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "status": "ACTIVE",
+      "createdAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "u2",
+      "username": "manager@enterprise.gov.cn",
+      "name": "业务管理员",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "createdAt": "2024-01-05T12:00:00Z"
+    },
+    {
+      "id": "u3",
+      "username": "clerk1@enterprise.gov.cn",
+      "name": "信息录入员",
+      "role": "ENTRY_CLERK",
+      "status": "ACTIVE",
+      "createdAt": "2024-02-10T14:30:00Z"
+    },
+    {
+      "id": "u4",
+      "username": "query@enterprise.gov.cn",
+      "name": "数据查询员",
+      "role": "QUERY_CLERK",
+      "status": "ACTIVE",
+      "createdAt": "2024-03-01T09:00:00Z"
+    }
+  ],
+  "enterprises": [],
+  "talents": [
+    {
+      "id": "t1",
+      "name": "Dr. Emily Chen",
+      "gender": "Female",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1985-04-12",
+      "education": "Doctorate",
+      "educationDetail": "PhD in Advanced Materials",
+      "school": "National Tech Institute",
+      "phone": "+86 138-XXXX-9921",
+      "email": "e.chen@nti.gov.cn",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent1",
+      "enterpriseName": "Nexus Technologies Corp",
+      "title": "Senior Researcher, National Tech Institute",
+      "socialTitles": [
+        "Provincial Association of Materials Committee",
+        "Municipal CPPCC Member"
+      ],
+      "overseasBackground": "留学美国麻省理工学院(MIT)材料科学系，博士后研究3年(2011-2014)",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+      "awards": [
+        {
+          "id": "aw1",
+          "awardName": "National Outstanding Youth Science Fund",
+          "time": "2023",
+          "status": "Awarded",
+          "level": "National",
+          "grade": "一等奖",
+          "bonus": 200000,
+          "opinion": "在先进半导体材料研发及工艺上具有突出突破，研究成果发表于顶尖学术期刊，获得同行评审全A通过。"
+        },
+        {
+          "id": "aw2",
+          "awardName": "Provincial Tech Innovation Leading Talent",
+          "time": "2021",
+          "status": "Awarded",
+          "level": "Provincial",
+          "grade": "最高资助级",
+          "bonus": 100000,
+          "opinion": "在省级重点新材料项目研发中表现优异，主导的多项发明专利已于辖区内重点企业Nexus Technologies进行产学研落地。"
+        },
+        {
+          "id": "aw3",
+          "awardName": "City Special Expert Allowance Program",
+          "time": "2020",
+          "status": "Expired",
+          "level": "Municipal",
+          "grade": "特等津贴",
+          "bonus": 50000,
+          "opinion": "考核通过，津贴已按期发放完毕，专家任期于2023年结束。"
+        },
+        {
+          "id": "aw4",
+          "awardName": "State Key Lab Principal Investigator Grant",
+          "time": "2024",
+          "status": "Under Review",
+          "level": "Institutional",
+          "opinion": "正在评审阶段，拟开展新一代微纳机器人的精密电磁驱动研究。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-01-15T09:00:00Z"
+    },
+    {
+      "id": "t2",
+      "name": "Dr. Jian Chen",
+      "gender": "Male",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1980-09-18",
+      "education": "Doctorate",
+      "educationDetail": "PhD Computer Science",
+      "school": "Tsinghua University",
+      "phone": "+86 139-XXXX-1122",
+      "email": "j.chen@national-ai-lab.org",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent2",
+      "enterpriseName": "AlphaTech Systems Co., Ltd.",
+      "title": "Lead Scientist, National AI Research Lab",
+      "socialTitles": [
+        "AI Industry Association Director"
+      ],
+      "overseasBackground": "留学英国牛津大学计算机科学系，联合培养博士，博后2年",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      "awards": [
+        {
+          "id": "aw5",
+          "awardName": "State Tech Innovation Award",
+          "time": "2023",
+          "status": "Awarded",
+          "level": "National",
+          "grade": "二等奖",
+          "bonus": 150000,
+          "opinion": "在深度学习大模型训练框架和高并发异构算力调度领域完成了颠覆性的技术演进。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-01-18T10:00:00Z"
+    },
+    {
+      "id": "t3",
+      "name": "Li Wei",
+      "gender": "Female",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1987-11-05",
+      "education": "Master",
+      "educationDetail": "Master's Economics",
+      "school": "Peking University",
+      "phone": "+86 136-XXXX-3344",
+      "email": "liwei@mofcom.gov.cn",
+      "politicalStatus": "Non-partisan",
+      "enterpriseId": "ent1",
+      "enterpriseName": "Nexus Technologies Corp",
+      "title": "Director of Analysis, Ministry of Commerce",
+      "socialTitles": [
+        "Young Economist Forum Expert Council Member"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+      "awards": [
+        {
+          "id": "aw6",
+          "awardName": "Outstanding Service Medal",
+          "time": "2022",
+          "status": "Awarded",
+          "level": "Provincial",
+          "grade": "一等功",
+          "bonus": 30000,
+          "opinion": "在自由贸易区商务制度创新及对德经贸关系谈判政策推演中作出了杰出贡献。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-01-20T11:00:00Z"
+    },
+    {
+      "id": "t4",
+      "name": "Prof. Wang Qingshan",
+      "gender": "Male",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1973-03-22",
+      "education": "Doctorate",
+      "educationDetail": "PhD Physics",
+      "school": "Tsinghua University",
+      "phone": "+86 135-XXXX-7788",
+      "email": "wang_qs@tsinghua.edu.cn",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent2",
+      "enterpriseName": "AlphaTech Systems Co., Ltd.",
+      "title": "Department Head, Tsinghua University",
+      "socialTitles": [
+        "Academician Candidate of Chinese Academy of Sciences"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+      "awards": [
+        {
+          "id": "aw7",
+          "awardName": "National Science Fund",
+          "time": "2022",
+          "status": "Awarded",
+          "level": "National",
+          "bonus": 300000,
+          "opinion": "在超导凝聚态物理机制及拓扑自旋轨道耦合量子材料方面发表多篇Nature、Science论文。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-01-22T14:00:00Z"
+    },
+    {
+      "id": "t5",
+      "name": "Dr. Wei Chen",
+      "gender": "Male",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1982-05-14",
+      "education": "Doctorate",
+      "educationDetail": "PhD in AI",
+      "school": "University of Science and Technology of China",
+      "phone": "+86 138-XXXX-5555",
+      "email": "w.chen@technova.com",
+      "politicalStatus": "Democratic Party Member",
+      "enterpriseId": "ent5",
+      "enterpriseName": "TechNova AI Solutions",
+      "title": "CEO & Tech Lead, TechNova AI Solutions",
+      "overseasBackground": "留学新加坡国立大学计算机学院，联合博士后2年",
+      "awards": [
+        {
+          "id": "aw8",
+          "awardName": "Leading Innovator Award",
+          "time": "2023",
+          "status": "Under Review",
+          "level": "Provincial",
+          "opinion": "申报新一代多模态大模型及其工业质检边缘计算设备研发项目，正在答辩阶段。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-02-01T15:00:00Z"
+    },
+    {
+      "id": "t6",
+      "name": "Li Na",
+      "gender": "Female",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1989-08-27",
+      "education": "Master",
+      "educationDetail": "Master in Molecular Biology",
+      "school": "Fudan University",
+      "phone": "+86 130-XXXX-8888",
+      "email": "na.li@quantumbio.com",
+      "politicalStatus": "Non-partisan",
+      "enterpriseId": "ent6",
+      "enterpriseName": "Quantum Biotech",
+      "title": "Co-founder, Quantum Biotech",
+      "awards": [
+        {
+          "id": "aw9",
+          "awardName": "Youth Entrepreneur Grant",
+          "time": "2023",
+          "status": "Approved",
+          "level": "Municipal",
+          "bonus": 200000,
+          "opinion": "在张江生物医药青年科技创业大赛中斩获金奖，项目极具商业前景和技术颠覆性。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-02-05T16:00:00Z"
+    },
+    {
+      "id": "t7",
+      "name": "Zhang Wei",
+      "gender": "Male",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1978-12-10",
+      "education": "Doctorate",
+      "educationDetail": "PhD Electrochemical Engineering",
+      "school": "Harbin Institute of Technology",
+      "phone": "+86 131-XXXX-7777",
+      "email": "wei.zhang@greenenergy.com",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent7",
+      "enterpriseName": "Green Energy Corp",
+      "title": "R&D Vice President, Green Energy Corp",
+      "awards": [
+        {
+          "id": "aw10",
+          "awardName": "Housing Subsidy Level A",
+          "time": "2023",
+          "status": "Under Review",
+          "level": "Municipal",
+          "opinion": "材料核对完成，学历证明材料和企业工作社保核缴均符合顶尖人才引进补贴标准。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-02-10T11:00:00Z"
+    },
+    {
+      "id": "t8",
+      "name": "Dr. Liu Yang",
+      "gender": "Male",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1983-06-30",
+      "education": "Doctorate",
+      "educationDetail": "PhD Polymer Chemistry",
+      "school": "Zhejiang University",
+      "phone": "+86 133-XXXX-4433",
+      "email": "yang.liu@ams-inst.cn",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent1",
+      "enterpriseName": "Nexus Technologies Corp",
+      "title": "Senior Materials Researcher",
+      "awards": [
+        {
+          "id": "aw11",
+          "awardName": "Top Tier Talent Recognition",
+          "time": "2023",
+          "status": "Additional Info Required",
+          "level": "District/County",
+          "opinion": "需要提供国外博士后工作合同复印件及中英文纳税完税证明原件。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-02-12T10:00:00Z"
+    },
+    {
+      "id": "t9",
+      "name": "Wang Fang",
+      "gender": "Female",
+      "nation": "Han",
+      "nationality": "China",
+      "dob": "1991-02-15",
+      "education": "Master",
+      "educationDetail": "Master in Mechanical Engineering",
+      "school": "Shanghai Jiao Tong University",
+      "phone": "+86 150-XXXX-0012",
+      "email": "fang.wang@nextgen-robotics.com",
+      "politicalStatus": "CPC Member",
+      "enterpriseId": "ent4",
+      "enterpriseName": "Nexus Smart Manufacturing",
+      "title": "Senior Control Engineer",
+      "awards": [
+        {
+          "id": "aw12",
+          "awardName": "R&D Project Funding",
+          "time": "2023",
+          "status": "Approved",
+          "level": "District/County",
+          "bonus": 80000,
+          "opinion": "针对智能六轴机械臂伺服控制算法的项目课题申报符合高新技术核心开发资助方向。"
+        }
+      ],
+      "status": "Active",
+      "createdAt": "2024-02-15T09:30:00Z"
+    }
+  ],
+  "tags": {
+    "industries": [
+      "Information Technology",
+      "Advanced Manufacturing",
+      "Biomedical",
+      "Green Energy",
+      "New Materials",
+      "Aerospace",
+      "Consumer Electronics",
+      "Other"
+    ],
+    "qualifications": [
+      "High-tech Enterprise",
+      "Specialized & Innovative Enterprise",
+      "Little Giant",
+      "Gazelle Company",
+      "ISO 9001 Certified",
+      "CMMI 5 Certification",
+      "Other"
+    ],
+    "educationLevels": [
+      "Bachelor",
+      "Master",
+      "Doctorate",
+      "Post-Doc",
+      "Other"
+    ],
+    "awardCategories": [
+      "National Outstanding Youth Science Fund",
+      "Provincial Tech Innovation Leading Talent",
+      "City Special Expert Allowance Program",
+      "State Key Lab Principal Investigator Grant",
+      "State Tech Innovation Award",
+      "Outstanding Service Medal",
+      "National Science Fund",
+      "Leading Innovator Award",
+      "Youth Entrepreneur Grant",
+      "Housing Subsidy Level A",
+      "Top Tier Talent Recognition",
+      "R&D Project Funding"
+    ]
+  },
+  "logs": [
+    {
+      "id": "log_1783411293318_740",
+      "username": "admin@enterprise.gov.cn",
+      "name": "System",
+      "role": "ADMIN",
+      "time": "2026-07-07T08:01:33.318Z",
+      "actionType": "IMPORT",
+      "target": "Enterprise Import",
+      "details": "Smart imported 4226 enterprises (Added: 0, Overwritten: 4226)."
+    },
+    {
+      "id": "log_1783410934264_549",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-07T07:55:34.264Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "User 超级管理员 logged in successfully."
+    },
+    {
+      "id": "log_1783409322742_839",
+      "username": "admin@enterprise.gov.cn",
+      "name": "System",
+      "role": "ADMIN",
+      "time": "2026-07-07T07:28:42.742Z",
+      "actionType": "IMPORT",
+      "target": "Enterprise Import",
+      "details": "Smart imported 1485 enterprises (Added: 1485, Overwritten: 0)."
+    },
+    {
+      "id": "log_1783409204946_923",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-07T07:26:44.946Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "User 超级管理员 logged in successfully."
+    },
+    {
+      "id": "log_1783405778008_843",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-07T06:29:38.008Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "User 超级管理员 logged in successfully."
+    },
+    {
+      "id": "log_1783405241621_72",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-07T06:20:41.621Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "User 超级管理员 logged in successfully."
+    },
+    {
+      "id": "log1",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-06T08:30:00Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "Super Admin successfully logged in via IP 192.168.1.100."
+    },
+    {
+      "id": "log2",
+      "username": "admin@enterprise.gov.cn",
+      "name": "超级管理员",
+      "role": "SUPER_ADMIN",
+      "time": "2026-07-06T09:12:30Z",
+      "actionType": "LOGIN",
+      "target": "System Login",
+      "details": "Web session re-authenticated for admin."
+    }
+  ],
+  "config": {
+    "backupFrequency": "WEEKLY",
+    "backupRetentionDays": 30,
+    "autoCleanAttachments": true,
+    "autoCleanAgeYears": 3
+  }
+}
