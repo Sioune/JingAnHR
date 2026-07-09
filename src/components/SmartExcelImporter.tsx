@@ -147,6 +147,7 @@ export default function SmartExcelImporter({
   const processFile = (fileToProcess: File) => {
     setFile(fileToProcess);
     setErrorFeedback(null);
+    sheetHeadersCacheRef.current = {}; // Reset headers cache
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
@@ -239,13 +240,22 @@ export default function SmartExcelImporter({
     compileAggregatedHeaders(workbook, updatedSheets);
   };
 
+  // Cache for sheet full headers to avoid repetitive XLSX.utils.sheet_to_json calls during row parsing
+  const sheetHeadersCacheRef = useRef<{ [sheetName: string]: string[] }>({});
+
   // Helper to query cell value in a sheet-agnostic way
   const getCellValueByHeader = (rawRow: RawDataRow, headerName: string): any => {
     if (!headerName || !workbook) return "";
-    const sheet = workbook.Sheets[rawRow.sheetName];
-    const rawData: any[][] = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
-    const headerRowIdx = detectHeaderRowIdxForSheet(rawData);
-    const headers = (rawData[headerRowIdx] || []).map(h => String(h).trim());
+    
+    let headers = sheetHeadersCacheRef.current[rawRow.sheetName];
+    if (!headers) {
+      const sheet = workbook.Sheets[rawRow.sheetName];
+      const rawData: any[][] = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
+      const headerRowIdx = detectHeaderRowIdxForSheet(rawData);
+      headers = (rawData[headerRowIdx] || []).map(h => String(h).trim());
+      sheetHeadersCacheRef.current[rawRow.sheetName] = headers;
+    }
+
     const colIdx = headers.indexOf(headerName);
     if (colIdx !== -1) {
       return rawRow.row[colIdx];
@@ -302,8 +312,18 @@ export default function SmartExcelImporter({
   // Type converters
   const parseBoolean = (val: any): boolean => {
     if (val === undefined || val === null) return false;
+    if (typeof val === "boolean") return val;
+    if (typeof val === "number") return val !== 0;
     const str = String(val).trim().toLowerCase();
-    return ["是", "有", "对", "yes", "y", "true", "1"].some(term => str.includes(term));
+    if (!str) return false;
+    
+    // Check if it clearly means "No" / is empty / negative placeholder
+    const isNegative = ["否", "无", "不对", "没有", "no", "n", "false", "0", "非", "null", "undefined", "—", "-", "/"].some(term => str === term || str.includes(term));
+    if (isNegative) return false;
+    
+    // Otherwise, if it has any characters, since it's mapped to a boolean field (e.g. "isSpecializedNew")
+    // and is not a negative term, it represents a positive qualification (e.g. "专精特新", "高新技术企业") or "是", "yes", "1", etc.
+    return true;
   };
 
   const parseNumber = (val: any): number => {
